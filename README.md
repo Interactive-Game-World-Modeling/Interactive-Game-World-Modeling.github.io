@@ -40,7 +40,7 @@ Publish this repository with GitHub Pages from the root of its main branch. The 
 
 ## Provenance of images
 
-- `assets/people/*.jpg`: headshots taken from each person's homepage, as listed in `index.html`.
+- `assets/people/*.jpg`: headshots taken from each person's homepage, as listed in `index.html`, except Xuan Zhang's, which was provided directly.
 - `assets/island.webp`: rendered from `assets/world.js`.
 
 ## Local design notes
