@@ -41,6 +41,7 @@ Publish this repository with GitHub Pages from the root of its main branch. The 
 ## Provenance of images
 
 - `assets/people/*.jpg`: headshots taken from each person's homepage, as listed in `index.html`, except Xuan Zhang's, which was provided directly.
+- `assets/schools/*.png`: university crests rendered from files on Wikipedia and Wikimedia Commons. They are the universities' marks, so check each institution's rules before the site goes public.
 - `assets/island.webp`: rendered from `assets/world.js`.
 
 ## Local design notes
