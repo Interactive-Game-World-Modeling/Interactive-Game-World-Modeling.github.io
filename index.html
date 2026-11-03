@@ -1,0 +1,188 @@
+<!doctype html>
+<!-- Set data-status="accepted" after the CVPR decision. Elements marked when-proposed and when-accepted switch with it. -->
+<html lang="en" data-status="proposed">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IGW 2027: The 1st Workshop on Interactive Game World Modeling</title>
+<meta name="description" content="How generative systems construct, control, evaluate, and revise playable game worlds. Papers, a hackathon, and a shared task.">
+<meta name="theme-color" content="#0C7594">
+<meta property="og:title" content="The 1st Workshop on Interactive Game World Modeling">
+<meta property="og:description" content="How generative systems construct, control, evaluate, and revise playable game worlds. Papers, a hackathon, and a shared task.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/gabarito.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/source-sans-3.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+<noscript><style>.world-poster{display:block}.world-ui{display:none}</style></noscript>
+</head>
+<body>
+<svg class="defs" width="0" height="0" aria-hidden="true">
+  <symbol id="house" viewBox="0 0 24 26">
+    <path d="M12 1 22.5 9.6 12 13.8 1.5 9.6Z" style="fill:var(--roof)"/>
+    <path d="M3.6 10.8 12 14.2V25L3.6 21.2Z" fill="#B7CBD3"/>
+    <path d="M20.4 10.8 12 14.2V25L20.4 21.2Z" fill="#8FA9B4"/>
+  </symbol>
+</svg>
+<a class="skip" href="#about">Skip to content</a>
+
+<header class="nav-bar">
+  <a class="brand" href="#top"><svg class="house" aria-hidden="true"><use href="#house"/></svg>IGW</a>
+  <nav class="nav-links" aria-label="Sections">
+    <a href="#about">About</a>
+    <a href="#speakers">Speakers</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#tracks">Call for Participation</a>
+    <a href="#dates">Dates</a>
+    <!-- Organizers are hidden for now. To bring them back, restore this link and remove hidden from the section below. -->
+    <!-- <a href="#organizers">Organizers</a> -->
+  </nav>
+</header>
+
+<section class="masthead" id="top">
+  <canvas id="world" role="img" aria-label="An isometric town on an island. Click the grass to raise a house, or use the Build button."></canvas>
+  <img class="world-poster" src="assets/island.webp" alt="An isometric town of colored roofs on a green island with a sandy shore." loading="lazy">
+  <div class="mast-inner">
+    <div class="mast-copy">
+      <h1><span class="h1-pre">The 1st Workshop on</span> Interactive Game World Modeling</h1>
+      <p class="mast-where"><span class="when-proposed">Proposed for </span>CVPR 2027, Seattle, <span class="nowrap">June 20 or 21, 2027</span></p>
+      <p class="lead">How generative systems construct, control, evaluate, and revise worlds that people can play.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#tracks">Call for Participation</a>
+        <a class="btn" href="#schedule">Schedule</a>
+      </div>
+    </div>
+    <div class="mast-foot">
+      <div class="world-ui">
+        <p id="world-status" role="status">Click the island to build. A rule-based demo, no model involved.</p>
+        <div class="world-controls">
+          <button type="button" class="btn btn-ghost" id="world-build">Build</button>
+          <button type="button" class="btn btn-ghost" id="world-reset">Reset</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main>
+
+<section id="about" class="section">
+  <div class="section-head"><h2>About</h2></div>
+  <div class="body">
+    <p class="lede">Creating a playable game world requires visual content, game rules, and player actions to work together. This workshop brings together agentic game development, game-ready 3D/4D generation, and interactive world models around a shared goal: turning design intent into playable experiences.</p>
+    <h3>Topics</h3>
+    <ul class="topics">
+      <li><h4>Code-to-visual generation and LLMs</h4><p>Agents that turn game briefs into executable, playtested projects.</p></li>
+      <li><h4>3D/4D generation</h4><p>Game-ready assets, characters, terrain, and dynamic scenes.</p></li>
+      <li><h4>Interactive game world models</h4><p>Neural game engines, action-conditioned generation, and real-time control.</p></li>
+      <li><h4>Data, evaluation, and human interaction</h4><p>Design intent, playability, reliability, and tools to revise worlds.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section id="speakers" class="section">
+  <div class="section-head"><h2>Invited Speakers</h2><p>Tentative</p></div>
+  <ul class="body people">
+    <li><span class="photo photo-mono" aria-hidden="true">AL</span><span class="name">Adrian Lim</span><span class="role">Roblox</span></li>
+    <li><a href="https://sites.cs.ucsb.edu/~sra/" rel="noopener"><img class="photo" src="assets/people/misha-sra.jpg" alt="" width="360" height="360" loading="lazy"><span class="name">Misha Sra</span></a><span class="role">UC Santa Barbara</span></li>
+    <li><a href="https://schedule.gdconf.com/session/zenith-diffusion-model-driven-map-generation/914450" rel="noopener"><span class="photo photo-mono" aria-hidden="true">ZZ</span><span class="name">Zhen Zhai</span></a><span class="role">Blizzard Entertainment</span></li>
+  </ul>
+</section>
+
+<section id="schedule" class="section">
+  <div class="section-head"><h2>Schedule</h2><p>Tentative. In person<span class="when-proposed">, full day requested</span>.</p></div>
+  <div class="body">
+    <!-- To change the program, edit these rows. -->
+    <table class="schedule">
+      <thead><tr><th scope="col">Time</th><th scope="col">Session</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">08:30&ndash;08:45</th><td>Opening remarks</td></tr>
+        <tr><th scope="row">08:45&ndash;09:30</th><td>Invited talk: Misha Sra</td></tr>
+        <tr><th scope="row">09:30&ndash;10:15</th><td>Invited talk: Adrian Lim</td></tr>
+        <tr class="break"><th scope="row">10:15&ndash;10:35</th><td>Coffee break</td></tr>
+        <tr><th scope="row">10:35&ndash;11:15</th><td>Research orals</td></tr>
+        <tr><th scope="row">11:15&ndash;12:00</th><td>Hackathon finalist pitches</td></tr>
+        <tr class="break"><th scope="row">12:00&ndash;13:00</th><td>Lunch</td></tr>
+        <tr><th scope="row">13:00&ndash;13:45</th><td>Invited talk: Zhen Zhai</td></tr>
+        <tr><th scope="row">13:45&ndash;14:30</th><td>Shared Task: protocol and baselines</td></tr>
+        <tr><th scope="row">14:30&ndash;15:10</th><td>Research orals</td></tr>
+        <tr><th scope="row">15:10&ndash;16:00</th><td>Posters and playable demos</td></tr>
+        <tr><th scope="row">16:00&ndash;16:45</th><td>Shared Task: results and top teams</td></tr>
+        <tr><th scope="row">16:45&ndash;17:15</th><td>Panel</td></tr>
+        <tr><th scope="row">17:15&ndash;17:30</th><td>Awards and closing</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="tracks" class="section">
+  <div class="section-head"><h2>Call for Participation</h2><p><span class="when-proposed">Proposed tracks. </span>A team may enter any combination. Calls open from January 2027.</p></div>
+  <ul class="body tracks">
+    <li data-track="papers">
+      <svg class="house" aria-hidden="true"><use href="#house"/></svg>
+      <h3>Research Track</h3>
+      <p>Non-archival long papers (up to 8 pages) and short papers (up to 4 pages) in CVPR format, with double-blind review on OpenReview. Accepted papers over 4 pages count as prior publications under CVPR guidelines.</p>
+      <p class="due">Papers due May 1, 2027</p>
+    </li>
+    <li data-track="hack">
+      <svg class="house" aria-hidden="true"><use href="#house"/></svg>
+      <h3>AI for Games Hackathon</h3>
+      <p>Build a playable project with AI, mainly with 3D/4D generation or code agents. Online, with no paper or public source code required. Finalists demo at the workshop.</p>
+      <p class="due">Projects due May 1, 2027</p>
+    </li>
+    <li data-track="task">
+      <svg class="house" aria-hidden="true"><use href="#house"/></svg>
+      <h3>Shared Task</h3>
+      <p>Recreate playable games from AAA-quality gameplay video with any method. The Game Recreation Benchmark runs each build and tests its mechanics, visuals, and response to input, with a public leaderboard.</p>
+      <p class="due">Entries due May 1, 2027</p>
+    </li>
+  </ul>
+</section>
+
+<section id="dates" class="section">
+  <div class="section-head"><h2>Important Dates</h2><p><span class="when-proposed">Proposed. </span>Deadlines are 11:59 PM AoE.</p></div>
+  <div class="body">
+    <table class="dates">
+      <thead><tr><th scope="col">Date</th><th scope="col">Milestone</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">January 2027</th><td>Calls for papers and the hackathon</td></tr>
+        <tr><th scope="row">February 1, 2027</th><td>Shared Task development data, rules, and baseline</td></tr>
+        <tr class="deadline"><th scope="row">May 1, 2027</th><td>Deadline for papers, hackathon projects, and Shared Task entries</td></tr>
+        <tr><th scope="row">May 15, 2027</th><td>Paper notifications and hackathon finalists</td></tr>
+        <tr><th scope="row">May 29, 2027</th><td>Shared Task final results and final paper metadata</td></tr>
+        <tr class="event"><th scope="row">June 20 or 21, 2027</th><td>Workshop at CVPR 2027, Seattle</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="organizers" class="section" hidden>
+  <div class="section-head"><h2>Organizers</h2></div>
+  <ul class="body people">
+    <li><a href="https://jinyeying.github.io/" rel="noopener"><img class="photo" src="assets/people/yeying-jin.jpg" alt="" width="360" height="360" loading="lazy"><span class="name">Yeying Jin</span></a><span class="role">Tencent and NUS</span></li>
+    <li><a href="https://algoroxyolo.github.io/" rel="noopener"><img class="photo" src="assets/people/yunze-xiao.jpg" alt="" width="360" height="360" loading="lazy"><span class="name">Yunze Xiao</span></a><span class="role">Monash University (incoming)</span></li>
+    <li><a href="https://charliedreemur.github.io/" rel="noopener"><img class="photo" src="assets/people/weijia-zhang.jpg" alt="" width="360" height="360" loading="lazy"><span class="name">Weijia Zhang</span></a><span class="role">Yale University</span></li>
+    <li><a href="https://xmhzz2018.github.io/" rel="noopener"><img class="photo" src="assets/people/ziyan-jiang.jpg" alt="" width="360" height="360" loading="lazy"><span class="name">Ziyan Jiang</span></a><span class="role">UC Santa Barbara</span></li>
+    <li><a href="https://haozheh3.github.io/" rel="noopener"><img class="photo" src="assets/people/haozhe-wang.jpg" alt="" width="360" height="360" loading="lazy"><span class="name">Haozhe Wang</span></a><span class="role">HKUST</span></li>
+    <li><a href="https://xuanzhang.io/" rel="noopener"><span class="photo photo-mono" aria-hidden="true">XZ</span><span class="name">Xuan Zhang</span></a><span class="role">NUS</span></li>
+    <li><a href="https://tianshijing.github.io/" rel="noopener"><img class="photo" src="assets/people/juanxi-tian.jpg" alt="" width="360" height="360" loading="lazy"><span class="name">Juanxi Tian</span></a><span class="role">NTU</span></li>
+  </ul>
+</section>
+
+</main>
+
+<footer class="close" id="contact">
+  <div class="close-inner">
+    <div class="section-head"><h2>Contact</h2></div>
+    <div class="close-body">
+      <p>A contact address will be posted here.</p>
+      <p class="fine">The 1st Workshop on Interactive Game World Modeling (IGW). <span class="when-proposed">Proposal under review for CVPR 2027; decisions are due December 22, 2026.</span><span class="when-accepted">At CVPR 2027, Seattle.</span></p>
+    </div>
+  </div>
+  <img class="close-island" src="assets/island.webp" alt="" loading="lazy">
+</footer>
+
+<script src="assets/site.js" defer></script>
+<script type="module" src="assets/world.js"></script>
+</body>
+</html>

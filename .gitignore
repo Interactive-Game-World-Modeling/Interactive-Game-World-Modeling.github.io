@@ -1,0 +1,5 @@
+# Design records and working files stay local: this repository has to be public for GitHub Pages.
+PRODUCT.md
+DESIGN.md
+.impeccable/
+.claude/
