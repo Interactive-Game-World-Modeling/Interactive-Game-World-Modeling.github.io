@@ -121,6 +121,7 @@ h4 { font: 650 18.5px/1.22 var(--display); }
 
 /* People */
 .people { display: grid; grid-template-columns: repeat(auto-fill, minmax(122px, 1fr)); gap: 26px clamp(14px, 1.6vw, 22px); }
+#organizers .people { grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 560px; }
 .people a { display: block; color: inherit; text-decoration: none; }
 .photo { display: flex; width: 100%; aspect-ratio: 1; height: auto; object-fit: cover; border-radius: 14px; background: var(--foam); transition: transform .22s cubic-bezier(.16, 1, .3, 1); }
 .photo-mono { align-items: center; justify-content: center; color: var(--sea-deep); font: 800 34px/1 var(--display); letter-spacing: .01em; }
@@ -195,7 +196,7 @@ tbody th { white-space: nowrap; }
   .section, .close-inner { grid-template-columns: minmax(0, 1fr); row-gap: 16px; }
   .section { padding-block: 40px; }
   .lede { font-size: 19.5px; }
-  .people { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 22px 14px; }
+  .people, #organizers .people { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 22px 14px; max-width: none; }
   table { font-size: 17px; }
   th, td { padding: 9px 8px; }
   .schedule tbody th { width: 108px; white-space: nowrap; }

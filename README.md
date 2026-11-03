@@ -17,9 +17,14 @@ All content is in `index.html`.
 - **Schedule and dates:** edit the table rows in place. Each track's deadline also appears in its block under Call for Participation, so change both.
 - **After the CVPR decision:** set `data-status="accepted"` on the `<html>` tag. Text marked `when-proposed` disappears and text marked `when-accepted` appears.
 - **A speaker's or organizer's photo:** add a square JPEG to `assets/people/` (360 by 360 is enough) and replace the `photo-mono` element with an `<img class="photo">`, copying a neighbor. The same card is used for speakers and organizers.
-- **Organizers:** the section is hidden for now. To show it, remove `hidden` from `<section id="organizers">` and restore the commented-out link in the navigation. The names and photos stay in the source while it is hidden.
-- **Contact:** edit the Contact section at the bottom.
+- **Organizers:** listed in the same order as the proposal.
+- **Contact:** edit the Contact section at the bottom. It lists the proposal's primary and secondary contacts.
 - **Submission links:** when the calls open, add a link to each track block. Full rules are in the proposal (`CVPR_Game_Workshop/sec/` in the CVPRWorkshop repository); give a track its own page if they run long, as other workshop sites do for challenges.
+
+## Promised in the proposal
+
+- When the calls open: each track's lead, the hackathon jury, and the rules.
+- After the workshop: the program, titles and abstracts of accepted papers, project links, the Shared Task leaderboard, talk recordings where permission is granted, and a Hackathon gallery.
 
 ## The island
 
